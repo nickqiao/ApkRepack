@@ -68,7 +68,7 @@ class Apk(object):
                appname=None,
                iconname=None,
                iconpath=None,
-               support_falsh=True,
+               support_flash=True,
                packagename=None,
                outputapk=const.outputapk):
         """ inputapk 要反编译的apk文件
@@ -103,7 +103,7 @@ class Apk(object):
         # utils.xcopy(const.repack_dir_aar_jni, const.lib_dir)
         # utils.xcopy(const.repack_dir_aar_assets, const.assets_dir)
 
-        AndroidManifest(const.androidmenifest_xml).change_app(packagename, iconname, appname, support_falsh)
+        AndroidManifest(const.androidmenifest_xml).change_app(packagename, iconname, appname, support_flash)
         if os.path.exists(iconpath):
             if not os.path.exists(const.xhdpi_dir):
                 os.makedirs(const.xhdpi_dir)
